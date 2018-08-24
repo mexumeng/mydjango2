@@ -1,0 +1,21 @@
+{% extends 'org_base.html' %}
+{% load staticfiles %}
+{% block custom_title %}机构介绍{% endblock %}
+{% block custom_bread %}
+	<div class="wp">
+		<ul  class="crumbs">
+			<li><a href="{% url 'index' %}">首页</a>></li>
+			<li><a href="{% url 'org:org_list' %}">课程机构</a>></li>
+			<li>机构介绍</li>
+		</ul>
+	</div>
+{% endblock %}
+{% block form_right %}
+	<div class="right companycenter layout" >
+		<div class="head">
+			<h1>机构介绍</h1>
+		</div>
+		<div class="cont">&nbsp; &nbsp;{{ course_org.desc }} <p>&nbsp; &nbsp;</p>
+		</div>
+	</div>
+{% endblock %}
